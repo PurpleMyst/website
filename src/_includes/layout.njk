@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" type="image/png" href="/favicon.png">
+</head>
+<body>
+    <header>
+        <h1 class="prompt">whoami</h1>
+    </header>
+    
+    <main>
+        {{ content | safe }}
+    </main>
+
+    <footer>
+        <p style="opacity: 0.5; margin-top: 3rem;">
+            <a class="hidden" href="https://breezewiki.com/cavestory/wiki/Map_System">
+            So long as you retain your spirit of exploration, surely you shall find your way out. This I believe.
+            </a>
+        </p>
+    </footer>
+</body>
+</html>

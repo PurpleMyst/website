@@ -1,0 +1,111 @@
+/* 1. Define Regular */
+@font-face {
+  font-family: 'Iosevka Term';
+  src: url('/fonts/Iosevka-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* 2. Define Bold */
+@font-face {
+  font-family: 'Iosevka Term';
+  src: url('/fonts/Iosevka-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --bg-color: #1a1b26;       /* Terminal Dark Blue/Grey */
+  --text-color: #a9b1d6;     /* Soft White/Grey */
+  --accent-color: #7aa2f7;   /* Neon Blue */
+  --cmd-color: #9ece6a;      /* Terminal Green for 'commands' */
+  --font-stack: "Iosevka Term", monospace;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-stack);
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-size: 1.1rem;
+}
+
+/* Typography */
+h1, h2, h3 { color: var(--text-color); font-weight: 700; }
+
+a { color: var(--accent-color); text-decoration: none; border-bottom: 1px dotted var(--accent-color); }
+a:hover { background-color: var(--accent-color); color: var(--bg-color); }
+
+a.hidden { text-decoration: none; border: none; color: inherit; }
+a.hidden:hover { background: none; color: inherit; }
+
+/* The "Command Line" Prompt Look */
+.prompt::before {
+  content: "~/PurpleMyst/dev $ ";
+  color: var(--cmd-color);
+  margin-right: 0.5rem;
+}
+
+/* Minimal List Styling */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Base List Item styling */
+li {
+  position: relative;
+  padding-left: 1.5rem; /* Space for the prompt char */
+  margin-bottom: 0.5rem;
+}
+
+/* Level 1: The Standard Prompt */
+/* Selects direct children of the main list */
+ul > li::before {
+  content: ">";
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+  color: var(--cmd-color); /* Green */
+}
+
+/* Level 2: Nested Items */
+/* Selects ULs inside ULs */
+ul ul {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  margin-left: 0.5rem; /* Slight offset */
+  padding-left: 1rem;  /* Indentation */
+  border-left: 1px solid #414868; /* A subtle 'tree' line guide */
+}
+
+/* Level 2 Marker */
+ul ul li::before {
+  content: "+"; /* Changing the symbol to denote nesting */
+  color: var(--accent-color); /* Blue */
+}
+
+/* Level 3: Deep Nesting (Optional) */
+ul ul ul {
+  border-left: 1px dashed #414868;
+}
+
+ul ul ul li::before {
+  content: "-";
+  color: #565f89; /* Dimmed color */
+}
+
+/* Code Block Styling */
+pre {
+  background: #24283b;
+  padding: 1rem;
+  border: 1px solid #414868;
+  border-radius: 4px;
+  overflow-x: auto;
+}
