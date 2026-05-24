@@ -11,9 +11,6 @@ importers:
       '@11ty/eleventy':
         specifier: ^3.1.2
         version: 3.1.2
-      '@fontsource/iosevka':
-        specifier: ^5.2.5
-        version: 5.2.5
 
 packages:
 
@@ -52,9 +49,6 @@ packages:
   '@11ty/recursive-copy@4.0.2':
     resolution: {integrity: sha512-174nFXxL/6KcYbLYpra+q3nDbfKxLxRTNVY1atq2M1pYYiPfHse++3IFNl8mjPFsd7y2qQjxLORzIjHMjL3NDQ==}
     engines: {node: '>=18'}
-
-  '@fontsource/iosevka@5.2.5':
-    resolution: {integrity: sha512-Zv/UHJodDug1LcnWv2u2+GPp3oWP3U6Xp16cJOsqqZQNsCu8sA/ttT331N0NypxBZ+7c8szlSRlYDcy9liZ8pw==}
 
   '@sindresorhus/slugify@2.2.1':
     resolution: {integrity: sha512-MkngSCRZ8JdSOCHRaYd+D01XhvU3Hjy6MGl06zhOk614hp9EOAp5gIkBeQg7wtmxpitU6eAL4kdiRMcJa2dlrw==}
@@ -653,8 +647,6 @@ snapshots:
       junk: 3.1.0
       maximatch: 0.1.0
       slash: 3.0.0
-
-  '@fontsource/iosevka@5.2.5': {}
 
   '@sindresorhus/slugify@2.2.1':
     dependencies:
